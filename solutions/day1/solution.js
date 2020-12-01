@@ -21,6 +21,9 @@ async function solveForFirstStar (input) {
     })
     if (searchResult.length > 0) {
       console.log(searchResult)
+      const otherExpense = searchResult[0]
+      const result = expense * otherExpense
+      console.log(result)
     }
   })
 

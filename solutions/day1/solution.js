@@ -31,7 +31,23 @@ async function solveForFirstStar (input) {
 }
 
 async function solveForSecondStar (input) {
-  const solution = 'UNSOLVED'
+  let solution
+  const str = input
+  const res = str.split('\n').map(Number)
+
+  res.forEach(function (a) {
+    res.forEach(function (b) {
+      const searchResult = res.filter(function (item) {
+        return item === 2020 - a - b
+      })
+      if (searchResult.length > 0) {
+        console.log(searchResult)
+        const c = searchResult[0]
+        solution = a * b * c
+        console.log(solution)
+      }
+    })
+  })
   report('Solution 2:', solution)
 }
 

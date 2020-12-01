@@ -19,7 +19,9 @@ async function solveForFirstStar (input) {
     const searchResult = res.filter(function (item) {
       return item === 2020 - expense
     })
-    console.log(searchResult)
+    if (searchResult.length > 0) {
+      console.log(searchResult)
+    }
   })
 
   report('Solution 1:', solution)

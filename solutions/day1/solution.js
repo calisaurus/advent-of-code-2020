@@ -11,7 +11,7 @@ async function run () {
 }
 
 async function solveForFirstStar (input) {
-  const solution = 'UNSOLVED'
+  let solution
   const str = input
   const res = str.split('\n').map(Number)
 
@@ -22,8 +22,8 @@ async function solveForFirstStar (input) {
     if (searchResult.length > 0) {
       console.log(searchResult)
       const otherExpense = searchResult[0]
-      const result = expense * otherExpense
-      console.log(result)
+      solution = expense * otherExpense
+      console.log(solution)
     }
   })
 

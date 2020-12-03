@@ -17,8 +17,6 @@ function getTileAt (lines, x, y) {
 }
 
 async function solveForFirstStar (input) {
-  const solution = 'UNSOLVED'
-
   const dx = 3
   const dy = 1
 
@@ -29,21 +27,16 @@ async function solveForFirstStar (input) {
 
   let counter = 0
 
-  // console.log('Tile', getTileAt(lines, posx, posy))
-
   do {
-    // console.log('Tile', getTileAt(lines, posx, posy))
     const character = getTileAt(lines, posx, posy)
     if (character === '#') {
       counter++
     }
     posx = posx + dx
     posy = posy + dy
-    console.log(counter)
   } while (posy < height)
 
-  // report('Input:', input)
-  report('Solution 1:', solution)
+  report('Solution 1:', counter)
 }
 
 async function solveForSecondStar (input) {
